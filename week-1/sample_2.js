@@ -2,7 +2,7 @@ const http =require("http");
 const server = http.createServer();
 const MongoClient = require("mongodb").MongoClient;
 
-const url = "mongodb://localhost:20000";
+const url = "mongodb://localhost:27017";
 const dbName = "student";
 const client = new MongoClient(url, { useNewUrlParser: true });
 
