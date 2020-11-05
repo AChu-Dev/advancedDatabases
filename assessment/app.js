@@ -5,26 +5,32 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-mongoose.connect(MONGODB_URI, {useNewUrlParser:true,useUnifiedTopology:true});
+//Setting Up the Host and Webport:
+app.listen(process.env.WEB_PORT, () => {
+    console.log(`Example app listening at http://localhost:${process.env.WEB_PORT}`);
+});
 
+//setting up mongodb and mongoose using an error parse
+const MongoClient = require("mongodb").MongoClient;
+mongoose.connect(MONGODB_URI, {useNewUrlParser:true,useUnifiedTopology:true});
 mongoose.connection.on("error", (err) => {
     console.error(err);
-    console.log(
-        "MongoDB Connection Error."
-    );
+    console.log("MongoDB Connection Error.");
     process.exit();
 });
 
-app.listen(process.env.PORT, () => {
-    console.log(`Example app listening at http://localhost:${process.env.PORT}`);
-});
-
+//setting up app.js and ejs support.
 app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname, "/views/common/public")));
+app.use(express.static(path.join(__dirname, "public")));
+//rendering webpages used in the site...
 app.get("/", (req, res) => {
     res.render("index");
 });
+app.get("/dates", (req, res) => {
+    res.render("dates")
+});
 
-const langController = require("./controllers/lang");
-app.get("/langs", langController.list);
-app.get("/langs/delete/:id", langController.delete);
+//parsing to controllers, and its queries about Lang.
+const dateController = require("./controllers/date");
+app.get("/dates/get", dateController.list);
+app.get("/dates/delete/:id", dateController.delete);

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const {Schema} = mongoose;
 
-const langSchema = new Schema(
+const dateSchema = new Schema(
     {
         Date: String,
     },
@@ -9,4 +9,4 @@ const langSchema = new Schema(
 );
 
 
-module.exports = mongoose.model("Lang", langSchema);
+module.exports = mongoose.model("date", dateSchema);
