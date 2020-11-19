@@ -32,5 +32,6 @@ app.get("/dates", (req, res) => {
 
 //parsing to controllers, and its queries about Lang.
 const dateController = require("./controllers/date");
+const langControler = require("./controllers/lang")
 app.get("/dates/get", dateController.list);
 app.get("/dates/delete/:id", dateController.delete);

@@ -9,4 +9,4 @@ const dateSchema = new Schema(
 );
 
 
-module.exports = mongoose.model("date", dateSchema);
+var Date = mongoose.model("Date", dateSchema);
