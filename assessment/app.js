@@ -1,6 +1,6 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
-const {WEB_PORT, MONGODB_URI} = process.env;
+
 const express = require("express");
 const path = require("path");
 const app = express();
@@ -12,7 +12,7 @@ app.listen(process.env.WEB_PORT, () => {
 
 //setting up mongodb and mongoose using an error parse
 const MongoClient = require("mongodb").MongoClient;
-mongoose.connect(MONGODB_URI, {useNewUrlParser:true,useUnifiedTopology:true});
+mongoose.connect('mongodb://localhost:27017/pypl', {useNewUrlParser:true,useUnifiedTopology:true});
 mongoose.connection.on("error", (err) => {
     console.error(err);
     console.log("MongoDB Connection Error.");
@@ -32,6 +32,7 @@ app.get("/dates", (req, res) => {
 
 //parsing to controllers, and its queries about Lang.
 const dateController = require("./controllers/date");
-const langControler = require("./controllers/lang")
+//const langControler = require("./controllers/lang"); 
 app.get("/dates/get", dateController.list);
 app.get("/dates/delete/:id", dateController.delete);
+

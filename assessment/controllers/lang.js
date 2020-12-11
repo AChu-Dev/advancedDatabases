@@ -1,4 +1,3 @@
-const { hasUncaughtExceptionCaptureCallback } = require("process");
 const Lang = require("../models/Lang.js");
 
 exports.list = async (req, res) => {
@@ -16,8 +15,6 @@ exports.delete = async (req, res) => {
         await Langs.findByIdAndRemove(id);
         res.redirect("/Langs");
     } catch(e){
-        res.status(404).send({
-            message: "Could not delete record" + $id
-        });
+        res.status(404).send({message: "Could not delete record" + $id});
     }
 };

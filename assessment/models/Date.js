@@ -3,10 +3,9 @@ const {Schema} = mongoose;
 
 const dateSchema = new Schema(
     {
-        Date: String,
+        "Date": String 
     },
-    { timestamps: true }
 );
 
-
-var Date = mongoose.model("Date", dateSchema);
+console.log(dateSchema);
+module.exports = mongoose.model("dateModel", dateSchema);

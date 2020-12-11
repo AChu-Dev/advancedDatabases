@@ -1,24 +1,24 @@
-const { hasUncaughtExceptionCaptureCallback } = require("process");
-const Date = require("../models/Date.js");
+const dateModel = require("../models/Date");
 
 exports.list = async (req, res) => {
     try{
-        const Dates = await Date.find({});
-        console.log(Dates);
-        res.render("Dates", {Dates: Dates});
+        const Dates = await dateModel.find({});
+        res.render("dates", {Dates: Dates});
     } catch(e){
-        res.status(404).send({message: "couldn't find Dates"});
-    }
+        res.status(404).send({message: "could not list dates"});
+        console.log(e);
+        }
 };
 
 exports.delete = async (req, res) => {
     const id = req.params.id;
-    try{
-        await Date.findByIdAndRemove(id);
-        res.redirect("/dates");
+    try {
+        await dateModel.findByIdAndRemove(id);
+        res.redirect("dates");
     } catch(e){
         res.status(404).send({
             message: "Could not delete record" + $id
         });
     }
 };
+

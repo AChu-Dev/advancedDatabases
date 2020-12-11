@@ -4,9 +4,11 @@
 // Use Ctrl+Space inside a snippet or a string literal to trigger completions.
 
 // Select the database to use.
-use('test');
+use('pypl');
 
 // The drop() command destroys all data from a collection.
 // Make sure you run it against proper database and collection.
 
+//const dateModel = require("models/Date");
 
+db.dates.find({});
