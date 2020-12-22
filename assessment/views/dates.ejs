@@ -6,19 +6,14 @@
     <title>Date</title>
 </head>
 <body>
-    <ul> 
-        <% // try {// %>
-            <ul>
-                <% // Dates.forEach(function(Date){// %>        
-                     <li><%= // Date.Date // %></li>
-                <%// }); //%>  
-            </ul>
-            <% //console.log("Success Loading Dates");//%>
-            <h2>Success Loading Dates</h2>
-        <%// } catch (err) { //%>
-            <% //console.log(err); //%>
-            <% //console.log("Error Loading Dates") //%> 
-            <h1><%= //err //%> </h1>    
-        <%// }; //%> 
+    <ul>
+        <li> 
+            <% try { %>
+                <% dates.forEach(function(date){ %> 
+                    <li><%= date.Date %></li>
+                            <% }); %>
+            <% } catch(err) { %>
+                <h1><%= err %></h1> 
+            <% }; %></li>
     </ul>
 </body>

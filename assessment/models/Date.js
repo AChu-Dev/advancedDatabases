@@ -7,5 +7,5 @@ const dateSchema = new Schema(
     },
 );
 
-console.log(dateSchema);
-module.exports = mongoose.model("dateModel", dateSchema);
+//console.log(dateSchema);
+module.exports = mongoose.model("Date", dateSchema, 'dates');
