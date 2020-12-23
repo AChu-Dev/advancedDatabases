@@ -1,49 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Date</title>
 </head>
+
 <body>
-<div class="lang-table">
-    <table>
-        <thead>
-            <tr>
-                <th>Language Name</th>
-                <th>Value</th>
-            </tr>
-            <% langs.forEach(lang = >) { %> 
+    <div class="lang-table">
+        <table>
+            <thead>
                 <tr>
-                    <td><%= lang."Abap" %></td>
-                    <td><%= lang."Ada" %></td>
-                    <td><%= lang."C#" %></td>
-                    <td><%= lang."C/C#" %></td>
-                    <td><%= lang."Cobol" %></td>
-                    <td><%= lang."Dart" %></td>
-                    <td><%= lang."Delphi" %></td>
-                    <td><%= lang."Go" %></td>
-                    <td><%= lang."Groovy" %></td>
-                    <td><%= lang."Haskell" %></td>
-                    <td><%= lang."Java" %></td>
-                    <td><%= lang."Javascript" %></td>
-                    <td><%= lang."Julia"%></td>
-                    <td><%= lang."Kotlin" %></td>
-                    <td><%= lang."Lua" %></td>
-                    <td><%= lang."Matlab" %></td>
-                    <td><%= lang."Objective-C" %></td>
-                    <td><%= lang."Perl" %></td>
-                    <td><%= lang."PHP" %></td>
-                    <td><%= lang."Python" %></td>
-                    <td><%= lang."R" %></td>
-                    <td><%= lang."Ruby" %></td>
-                    <td><%= lang."Rust" %></td>
-                    <td><%= lang."Scala" %></td>
-                    <td><%= lang."Swift" %></td>
-                    <td><%= lang."TypeScript" %></td>                         "VBA": Number,
-                    <td><%= lang."VisualBasic"%></td>
+                    <th>Language Name</th>
+                    <th>Value</th>
                 </tr>
-        </thead>
-    </table>
-</div>
+            </thead>
+                <% langs.forEach(lang=> { %>
+                    <tr>
+                        <td>
+                            Abap
+                        </td>
+                        <td>
+                            <%= lang.Abap %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ada
+                        </td>
+                        <td>
+                            <%= lang.Ada %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            C#
+                        </td>
+                        <td>
+                            <%= lang.C_Sharp %> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            C/C++
+                        </td>
+                        <td>
+                            <%= lang.CorCPlusPlus %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cobol</td>
+                        <td>
+                            <%= lang.Cobol %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Dart
+                        </td>
+                        <td>
+                            <%= lang.Dart %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Delphi
+                        </td>
+                        <td>
+                            <%= lang.Delphi %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Go
+                        </td>
+                        <td>
+                            <%= lang.Go %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Groovy
+                        </td>
+                        <td>
+                            <%= lang.Groovy %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Haskell
+                        </td>
+                        <td>
+                            <%= lang.Haskell %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Java
+                        </td>
+                        <td>
+                            <%= lang.Java %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            JavaScript
+                        </td>
+                        <td>
+                            <%= lang.Javascript %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Julia
+                        </td>
+                        <td>
+                            <%= lang.Julia %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Kotlin
+                        </td>
+                        <td>
+                            <%= lang.Kotlin %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Lua
+                        </td>
+                        <td>
+                            <%= lang.Lua %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Matlab
+                        </td>
+                        <td>
+                            <%= lang.Matlab %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Objective-C
+                        </td>
+                        <td>
+                            <%= lang.Objective_C %>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            Perl
+                        </td>
+                        <td>
+                            <%= lang.Perl %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            PHP
+                        </td>
+                        <td>
+                            <%= lang.PHP %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Python
+                        </td>
+                        <td>
+                            <%= lang.Python %>
+                    </tr>
+                    <tr>
+                        <td>
+                            R
+                        </td>
+                        <td>
+                            <%= lang.R %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ruby
+                        </td>
+                        <td>
+                            <%= lang.Ruby %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Rust
+                        </td>
+                        <td>
+                            <%= lang.Rust %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Scala
+                        </td>
+                        <td>
+                            <%= lang.Scala %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Swift
+                        </td>
+                        <td>
+                            <%= lang.Swift %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            TypeScript
+                        </td>
+                        <td>
+                            <%= lang.TypeScript %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Visual Basic
+                        </td>
+                        <td>
+                            <%= lang.Visual_Basic %>
+                        </td>
+                    </tr>
+            <% }); %>
+        </table>
+    </div> 
 </body>

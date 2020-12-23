@@ -2,7 +2,9 @@ const Lang = require("../models/Lang");
 
 exports.list = async (req, res) => {
     try {
-        const langs = await Lang.find({});
+        var selectedDate = "September 2020";
+        console.log(selectedDate)
+        const langs = await Lang.find({Date: selectedDate});
         res.render("langs", {langs: langs});
     } catch(e) {
         res.status(404).send({message: "couldn't find Langs" + e});

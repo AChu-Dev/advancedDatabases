@@ -1,0 +1,15 @@
+<div class="lang-graph">
+    <canvas id="lang-graphBar" width="400" height="400"></canvas>
+</div>
+<script>
+    langs.forEach(lang => {
+        var langArray = [lang.Abap, lang.Ada, lang.C_Sharp, CorCPlusPlus, lang.Cobol, lang.Dart, lang.Delphi, lang.Go, lang.Groovy, lang.Haskell, lang.Java, lang.Kotlin, lang.Lua, lang.Matlab, lang.Objective_C, lang.Perl, lang.PHP, lang.Python, lang.R, lang.Ruby, lang.Rust, lang.Scala, lang.Swift, lang.TypeScript, lang.Visual_Basic]
+    });
+    var ctx = document.getElementById("lang-graphBar").getContext("2d");
+    var graphChart = new Chart(ctx, {
+        type: "doughnut",
+        data: langArray,
+        options: options
+    });
+    graphChart.render();
+</script>

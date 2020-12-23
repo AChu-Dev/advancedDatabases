@@ -5,8 +5,8 @@ const langSchema = new Schema(
     {
         "Abap": Number,
         "Ada": Number,
-        "C#": Number,
-        "C/C#": Number,
+        "C_Sharp": Number,
+        "CorCPlusPlus": Number,
         "Cobol": Number,
         "Dart": Number,
         "Delphi": Number,
@@ -19,7 +19,7 @@ const langSchema = new Schema(
         "Kotlin": Number,
         "Lua": Number,
         "Matlab": Number,
-        "Objective-C": Number,
+        "Objective_C": Number,
         "Perl": Number,
         "PHP": Number,
         "Python": Number,
@@ -30,7 +30,7 @@ const langSchema = new Schema(
         "Swift": Number,
         "TypeScript": Number,
         "VBA": Number,
-        "Visual Basic": Number,
+        "Visual_Basic": Number,
 
     },
 );
