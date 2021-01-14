@@ -50,6 +50,6 @@ app.get("/controlDate/update/:date/:abap/:ada/:c_sharp/:corcplusplus/:cobol/:dar
 
 
 //Setting Up the Host and Webport:
-app.listen(process.env.WEB_PORT, () => {
-    console.log(`Example app listening at http://localhost:${process.env.WEB_PORT}`)
+app.listen(process.env.PORT, () => {
+    console.log(`Example app listening at http://localhost:${process.env.PORT}`)
 });
