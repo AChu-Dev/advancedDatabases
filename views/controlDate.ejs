@@ -8,8 +8,7 @@
 </head>
 
 <body> 
-    <form method="POST">
-        <!--p><%= //Dates[0] %> </p-->
+    <form method="POST"> 
         <table>
             <thead>
                 <tr>
@@ -23,7 +22,7 @@
                         Date
                     </td>
                     <td>
-                        <input id="date" type="text" value="<%=Dates[0].Date%>">
+                        <input id="date" type="text" value="<%=Dates[0].Date ? Dates[0].Date: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -31,7 +30,7 @@
                         Abap
                     </td>
                     <td>
-                        <input id="abap" type="text" value="<%=Dates[0].Abap%>">
+                        <input id="abap" type="text" value="<%=Dates[0].Abap ? Dates[0].Abap: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -39,7 +38,7 @@
                         Ada
                     </td>
                     <td>
-                        <input id="ada" type="text" value="<%=Dates[0].Ada%>">
+                        <input id="ada" type="text" value="<%=Dates[0].Ada ? Dates[0].Ada: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -47,7 +46,7 @@
                         C#
                     </td>
                     <td>
-                        <input id="c_sharp" type="text" value="<%=Dates[0].C_Sharp%>">
+                        <input id="c_sharp" type="text" value="<%=Dates[0].C_Sharp ? Dates[0].C_Sharp: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -55,13 +54,13 @@
                         C/C++
                     </td>
                     <td>
-                        <input id="corcplusplus" type="text" value="<%=Dates[0].CorCPlusPlus%>">
+                        <input id="corcplusplus" type="text" value="<%=Dates[0].CorCPlusPlus ? Dates[0].CorCPlusPlus: ''%>">
                     </td>
                 </tr>
                 <tr>
                     <td>Cobol</td>
                     <td>
-                        <input id="cobol" type="text" value="<%=Dates[0].Cobol%>">
+                        <input id="cobol" type="text" value="<%=Dates[0].Cobol ? Dates[0].Cobol: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -69,7 +68,7 @@
                         Dart
                     </td>
                     <td>
-                        <input id="dart" type="text" value="<%=Dates[0].Dart%>">
+                        <input id="dart" type="text" value="<%=Dates[0].Dart ? Dates[0].Dart: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -77,7 +76,7 @@
                         Delphi
                     </td>
                     <td>
-                        <input id="delphi" type="text" value="<%=Dates[0].Delphi%>">
+                        <input id="delphi" type="text" value="<%=Dates[0].Delphi ? Dates[0].Delphi: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -85,7 +84,7 @@
                         Go
                     </td>
                     <td>
-                        <input id="go" type="text" value="<%=Dates[0].Go%>">
+                        <input id="go" type="text" value="<%=Dates[0].Go ? Dates[0].Go: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -93,7 +92,7 @@
                         Groovy
                     </td>
                     <td>
-                        <input id="groovy" type="text" value="<%=Dates[0].Groovy%>">
+                        <input id="groovy" type="text" value="<%=Dates[0].Groovy ? Dates[0].Groovy: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -101,7 +100,7 @@
                         Haskell
                     </td>
                     <td>
-                        <input id="haskell" type="text" value="<%=Dates[0].Haskell%>">
+                        <input id="haskell" type="text" value="<%=Dates[0].Haskell ? Dates[0].Haskell: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -109,7 +108,7 @@
                         Java
                     </td>
                     <td>
-                        <input id="java" type="text" value="<%=Dates[0].Java%>">
+                        <input id="java" type="text" value="<%=Dates[0].Java ? Dates[0].Java: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -117,7 +116,7 @@
                         JavaScript
                     </td>
                     <td>
-                        <input id="javascript"  type="text" value="<%=Dates[0].Javascript%>">
+                        <input id="javascript"  type="text" value="<%=Dates[0].Javascript ? Dates[0].Javascript: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -125,7 +124,7 @@
                         Julia
                     </td>
                     <td>
-                        <input id="julia" type="text" value="<%=Dates[0].Julia%>">
+                        <input id="julia" type="text" value="<%=Dates[0].Julia ? Dates[0].Julia: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -133,7 +132,7 @@
                         Kotlin
                     </td>
                     <td>
-                        <input id="kotlin" type="text" value="<%=Dates[0].Kotlin%>">
+                        <input id="kotlin" type="text" value="<%=Dates[0].Kotlin ? Dates[0].Kotlin: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -141,7 +140,7 @@
                         Lua
                     </td>
                     <td>
-                        <input id="lua" type="text" value="<%=Dates[0].Lua%>">
+                        <input id="lua" type="text" value="<%=Dates[0].Lua ? Dates[0].Lua: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -149,7 +148,7 @@
                         Matlab
                     </td>
                     <td>
-                        <input id="matlab" type="text" value="<%=Dates[0].Matlab%>">
+                        <input id="matlab" type="text" value="<%=Dates[0].Matlab ? Dates[0].Matlab: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -157,7 +156,7 @@
                         Objective-C
                     </td>
                     <td>
-                        <input id="objective_c" type="text" value="<%=Dates[0].Objective_C%>">
+                        <input id="objective_c" type="text" value="<%=Dates[0].Objective_C ? Dates[0].Objective_C: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -165,7 +164,7 @@
                         Perl
                     </td>
                     <td>
-                        <input id="perl" type="text" value="<%=Dates[0].Perl%>">
+                        <input id="perl" type="text" value="<%=Dates[0].Perl ? Dates[0].Perl: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -173,7 +172,7 @@
                         PHP
                     </td>
                     <td>
-                        <input id="php" type="text" value="<%=Dates[0].PHP%>">
+                        <input id="php" type="text" value="<%=Dates[0].PHP ? Dates[0].PHP: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -181,14 +180,14 @@
                         Python
                     </td>
                     <td>
-                        <input id="python" type="text" value="<%=Dates[0].Python%>">
+                        <input id="python" type="text" value="<%=Dates[0].Python ? Dates[0].Python: ''%>">
                 </tr>
                 <tr>
                     <td>
                         R
                     </td>
                     <td>
-                        <input id="r" type="text" value="<%=Dates[0].R%>">
+                        <input id="r" type="text" value="<%=Dates[0].R ? Dates[0].R: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -196,7 +195,7 @@
                         Ruby
                     </td>
                     <td>
-                        <input id="ruby" type="text" value="<%=Dates[0].Ruby%>">
+                        <input id="ruby" type="text" value="<%=Dates[0].Ruby ? Dates[0].Ruby: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -204,7 +203,7 @@
                         Rust
                     </td>
                     <td>
-                        <input id="rust" type="text" value="<%=Dates[0].Rust%>">
+                        <input id="rust" type="text" value="<%=Dates[0].Rust ? Dates[0].Rust: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -212,7 +211,7 @@
                         Scala
                     </td>
                     <td>
-                        <input id="scala" type="text" value="<%=Dates[0].Scala%>">
+                        <input id="scala" type="text" value="<%=Dates[0].Scala ? Dates[0].Scala: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -220,7 +219,7 @@
                         Swift
                     </td>
                     <td>
-                        <input id="swift" type="text" value="<%=Dates[0].Swift%>">
+                        <input id="swift" type="text" value="<%=Dates[0].Swift ? Dates[0].Swift: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -228,7 +227,7 @@
                         TypeScript
                     </td>
                     <td>
-                        <input id="typescript" type="text" value="<%=Dates[0].TypeScript%>">
+                        <input id="typescript" type="text" value="<%=Dates[0].TypeScript ? Dates[0].TypeScript: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -236,7 +235,7 @@
                         VBA
                     </td>
                     <td>
-                        <input id="vba" type="text" value="<%=Dates[0].VBA%>">
+                        <input id="vba" type="text" value="<%=Dates[0].VBA ? Dates[0].VBA: ''%>">
                     </td>
                 </tr>
                 <tr>
@@ -244,7 +243,7 @@
                         Visual Basic
                     </td>
                     <td>
-                        <input id="visual_basic" type="text" value="<%=Dates[0].Visual_Basic%>">
+                        <input id="visual_basic" type="text" value="<%=Dates[0].Visual_Basic ? Dates[0].Visual_Basic: ''%>">
                     </td>
                 </tr>
                 <tr>
