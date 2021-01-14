@@ -36,7 +36,7 @@ app.get("/", (req, res)=>{
     res.render("index");
 });
 
-app.get("/controlDate", (req, res) => {
+app.get("/controlDate/add/", (req, res) => {
     res.render("controlDate");
 });
 
