@@ -13,7 +13,7 @@ exports.list = async (req, res) => {
 exports.delete = async (req, res) => {
     const id = req.params.id;
     try {
-        await Date.findByIdAndRemove(id);
+        await Date.deleteOne({_id:id});
         res.redirect("/dates");
     } catch(e) {
         res.status(404).send({

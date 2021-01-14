@@ -23,6 +23,8 @@
     "mongodb": "^3.6.2",
     "mongoose": "^5.11.8",
     "nodemon": "^2.0.6",
-    "seeder": "^0.2.4"
+    "popper": "^1.0.1",
+    "seeder": "^0.2.4",
+    "zingchart": "^2.9.2"
   }
 }

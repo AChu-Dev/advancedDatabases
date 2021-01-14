@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Date</title>
+    <title>Language</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="/views/common/style.css">
 </head>
 
 <body>
@@ -16,7 +18,9 @@
                     <th>Value</th>
                 </tr>
             </thead>
+            <tbody>
                 <% langs.forEach(lang=> { %>
+                    <tr><a href="langs/delete/<%=lang._id%>">Delete Record</a></tr>
                     <tr>
                         <td>
                             Abap
@@ -38,7 +42,7 @@
                             C#
                         </td>
                         <td>
-                            <%= lang.C_Sharp %> 
+                            <%= lang.C_Sharp %>
                         </td>
                     </tr>
                     <tr>
@@ -150,7 +154,6 @@
                         <td>
                             <%= lang.Objective_C %>
                         </td>
-                        
                     </tr>
                     <tr>
                         <td>
@@ -231,7 +234,49 @@
                             <%= lang.Visual_Basic %>
                         </td>
                     </tr>
-            <% }); %>
+            </tbody>
         </table>
-    </div> 
+    </div>
+    <div class="langGraphDiv">
+        <canvas id="langDoughnut" width="400" height="400"></canvas>
+    </div>
+    <script>
+        var dataSTR = [<%=lang.Abap %>, <%=lang.Ada %>, <%=lang.C_Sharp %>, <%=lang.Cobol %>, <%=lang.CorCPlusPlus %>,  <%=lang.Dart %>, <%=lang.Delphi %>, <%=lang.Go %>, <%=lang.Groovy %>, <%=lang.Haskell %>, <%=lang.Java %>, <%=lang.Javascript %>, <%=lang.Julia %>, <%=lang.Kotlin %>, <%=lang.Lua %>, <%=lang.Matlab %>, <%=lang.Objective_C %>, <%=lang.Perl %>, <%=lang.PHP %>, <%=lang.Python %>, <%=lang.R %>, <%=lang.Ruby %>, <%=lang.Rust %>, <%=lang.Scala %>, <%=lang.Swift %>, <%=lang.TypeScript %>, <%=lang.VBA %>, <%=lang.Visual_Basic %>];
+        console.log(dataSTR + ' JS Input');
+        //The DB should contain Number Obejcts but I want to reparse them anyway
+        var data = [];
+        var colors = [];
+        dataSTR.forEach(x => {
+            data.push(parseFloat(x));
+            //generate random Hexadecimal RGB value
+            var color = "#" + Math.random().toString(16).slice(2, 8);
+            colors.push(color);
+        });
+        //logging arrays
+        console.log(colors);
+        console.log(data);
+        var ctx = document.getElementById("langDoughnut").getContext('2d');
+        var myDoughnutChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Abap', 'Ada', 'C#', 'Cobol', 'C/C++', 'Dart', 'Delphi', 'Go', 'Groovy', 'Haskell', 'Java', 'Javascript', 'Julia', 'Kotlin', 'Lua', 'Matlab', 'Objective-C', 'Perl', 'PHP', 'Python', 'R', 'Ruby', 'Rust', 'Scala', 'Swift', 'TypeScript', 'VBA', 'Visual Basic'],
+                datasets: [{
+                    label: "langDatePie",
+                    backgroundColor: colors,
+                    data: data
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    fontSize: 30,
+                    text: "Languages Tutorial",
+                },
+                cutoutPercentage: 50
+                //cutoutPercentage: 99
+            }
+        });
+    </script>
+    <% }); %>
 </body>

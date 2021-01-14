@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Date</title>
+    <title>Dates</title>
 </head>
+
 <body>
-    <ul>
-        <li> 
-            <% try { %>
-                <% dates.forEach(function(date){ %> 
-                    <li><%= date.Date %></li>
-                            <% }); %>
-            <% } catch(err) { %>
-                <h1><%= err %></h1> 
-            <% }; %></li>
-    </ul>
+    <h1>Dates</h1>
+    <% try { %>
+        <% dates.forEach(function(date){ %> 
+        <ul>
+            <li><%= date.Date %> | <a class="date_link" href="/langs/<%=date.Date%>">View Date</a> | <a class="date_link" href="dates/delete/<%= date._id %>">Delete Date</a> | <a class="date_link" href="../controlDate/update/<%=date._id%>">Update Date</a></li>
+        </ul>
+            <% }); %>
+                <% } catch(err) { %>
+                    <h1>
+                        <%= err %>
+                    </h1>
+                    <% }; %>
+        </div>
 </body>
