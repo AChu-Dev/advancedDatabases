@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>addDate</title>
 </head>
-
 <body> 
+    <% if typeof Dates == 'undefined'{
+        var Dates = []
+    }
+    %>
     <form method="POST"> 
         <table>
             <thead>
