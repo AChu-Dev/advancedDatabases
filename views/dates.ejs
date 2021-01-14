@@ -12,7 +12,7 @@
     <% try { %>
         <% dates.forEach(function(date){ %> 
         <ul>
-            <li><%= date.Date %> | <a class="date_link" href="/langs/<%=date.Date%>">View Date</a> | <a class="date_link" href="dates/delete/<%= date._id %>">Delete Date</a> | <a class="date_link" href="../controlDate/update/<%=date._id%>">Update Date</a></li>
+            <li><%= date.Date %> | <a class="date_link" href="/langs/<%=date.Date%>">View Date</a> | <a class="date_link" href="/dates/delete/<%=date._id %>">Delete Date</a> | <a class="date_link" href="../controlDate/update/<%=date._id%>">Update Date</a></li>
         </ul>
             <% }); %>
                 <% } catch(err) { %>

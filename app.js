@@ -44,9 +44,9 @@ app.get("/dates", dateController.list);
 app.get("/dates/delete/:id", dateController.delete);
 app.get("/langs/:date", langController.list);
 app.get("/langs/delete/:id", langController.delete);
-app.get("controlDate/update/:id", addDateController.list);
+app.get("/controlDate/update/:id", addDateController.list);
 app.get("/controlDate/add/:date/:abap/:ada/:c_sharp/:corcplusplus/:cobol/:dart/:delphi/:go/:groovy/:haskell/:java/:javascript/:julia/:kotlin/:lua/:matlab/:obective_c/:perl/:php/:python/:r/:ruby/:rust/:scala/:swift/:typescript/:vba/:visual_basic", addDateController.create);
-app.post("/controlDate/update/:date/:abap/:ada/:c_sharp/:corcplusplus/:cobol/:dart/:delphi/:go/:groovy/:haskell/:java/:javascript/:julia/:kotlin/:lua/:matlab/:obective_c/:perl/:php/:python/:r/:ruby/:rust/:scala/:swift/:typescript/:vba/:visual_basic", addDateController.update);
+app.get("/controlDate/update/:date/:abap/:ada/:c_sharp/:corcplusplus/:cobol/:dart/:delphi/:go/:groovy/:haskell/:java/:javascript/:julia/:kotlin/:lua/:matlab/:obective_c/:perl/:php/:python/:r/:ruby/:rust/:scala/:swift/:typescript/:vba/:visual_basic", addDateController.update);
 
 
 //Setting Up the Host and Webport:
