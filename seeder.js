@@ -9,7 +9,7 @@ const loading = require("loading-cli");
  * constants
  */
 // const uri = "mongodb://localhost:27017/pypl";
-const uri =  "mongodb+srv://Admin_User:<Astolfo27>@cluster0.iks9p.mongodb.net/<pypl>?retryWrites=true&w=majority"
+const uri =  "mongodb+srv://Admin_User:Astolfo27@cluster0.iks9p.mongodb.net/pypl?retryWrites=true&w=majority"
 const client = new MongoClient(uri);
 
 async function main() {
@@ -47,7 +47,7 @@ async function main() {
 
     load.stop();
     console.info(
-      DB collection set up! \n I've also created a dates collection!`
+      "DB collection set up! \n I've also created a dates collection!"
     );
 
 
@@ -60,4 +60,3 @@ async function main() {
 
 main();
 
-    ©
